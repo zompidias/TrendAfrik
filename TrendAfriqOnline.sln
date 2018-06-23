@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendAfriqOnline", "TrendAfriqOnline\TrendAfriqOnline.csproj", "{8E959445-8B6C-4756-A55A-88B577A7B75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TABusinessLayer", "TABusinessLayer\TABusinessLayer.csproj", "{DA8AC106-95B8-4510-B420-6D88D9DA64DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E959445-8B6C-4756-A55A-88B577A7B75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E959445-8B6C-4756-A55A-88B577A7B75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E959445-8B6C-4756-A55A-88B577A7B75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E959445-8B6C-4756-A55A-88B577A7B75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8AC106-95B8-4510-B420-6D88D9DA64DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8AC106-95B8-4510-B420-6D88D9DA64DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8AC106-95B8-4510-B420-6D88D9DA64DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8AC106-95B8-4510-B420-6D88D9DA64DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

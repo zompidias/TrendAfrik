@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TrendAfriqOnline.Models.Catalogue>
+
+
+    @foreach (var genre in Model)
+    {
+        <li>
+            @Html.ActionLink(genre.catalogueName, "Browse", new { id = genre.catalogueId }, null)
+        </li>
+    }

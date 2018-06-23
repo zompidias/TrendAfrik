@@ -1,0 +1,99 @@
+﻿@model TABusinessLayer.SellerItems
+
+@{
+    ViewBag.Title = "Make Changes to Catalogue Items";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        @Html.HiddenFor(model => model.itemId)
+ 
+        <div class="editor-label">
+           Item Name:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.itemName)
+            @Html.ValidationMessageFor(model => model.itemName)
+        </div>
+
+        <div class="editor-label">
+            Description:
+        </div>
+        <div class="editor-multiline-field">
+            @Html.EditorFor(model => model.itemDescription)
+            @Html.ValidationMessageFor(model => model.itemDescription)
+        </div>
+
+        <div class="editor-label">
+            Price:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.itemPrice)
+            @Html.ValidationMessageFor(model => model.itemPrice)
+        </div>
+
+        <div class="editor-label">
+           Catalogue Type:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.catalogueId)
+            @Html.ValidationMessageFor(model => model.catalogueId)
+        </div>
+
+        <div class="editor-label">
+            Client Name:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerId)
+            @Html.ValidationMessageFor(model => model.sellerId)
+        </div>
+        <div class="editor-label">
+            Picture Path
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.itemPicture)
+            @Html.ValidationMessageFor(model => model.itemPicture)
+        </div>
+        <div class="editor-label">
+            Picture A
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PictureA)
+            @Html.ValidationMessageFor(model => model.PictureA)
+        </div>
+        <div class="editor-label">
+            Picture B
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PictureB)
+            @Html.ValidationMessageFor(model => model.PictureB)
+        </div>
+        <div class="editor-label">
+            Picture C
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PictureC)
+            @Html.ValidationMessageFor(model => model.PictureC)
+        </div>
+        <div class="editor-label">
+            Alt Picture Title:
+                </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.itemAlternatePicName)
+            @Html.ValidationMessageFor(model => model.itemAlternatePicName)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back", "Index")</a>
+</div>

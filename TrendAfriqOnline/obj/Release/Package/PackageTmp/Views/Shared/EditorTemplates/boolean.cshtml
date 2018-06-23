@@ -1,0 +1,11 @@
+﻿@model Nullable<bool>
+@{
+    bool active = false;
+
+    if (Model != null && Model.HasValue)
+    {
+        active = Model.Value;
+    }
+}
+@Html.Label("" + "true", "Yes") @Html.RadioButton("", "True", active ? true : false, new { id = "Active_true" })
+@Html.Label("" + "false", "No") @Html.RadioButton("", "False", active ? false : true, new { id = "Active_false" })

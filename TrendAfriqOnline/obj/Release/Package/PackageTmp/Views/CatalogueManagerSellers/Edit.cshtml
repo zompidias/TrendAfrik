@@ -1,0 +1,63 @@
+﻿@model TABusinessLayer.SellerDetails
+
+@{
+    ViewBag.Title = "Make Changes to Client Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(model => model.sellerId)
+
+        <div class="editor-label">
+            Client Name: 
+                </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerName)
+            @Html.ValidationMessageFor(model => model.sellerName)
+        </div>
+
+        <div class="editor-label">
+            Address: 
+        </div>
+        <div class="editor-multiline-field">
+            @Html.EditorFor(model => model.sellerAddress)
+            @Html.ValidationMessageFor(model => model.sellerAddress)
+        </div>
+
+        <div class="editor-label">
+            Phone: 
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerPhone)
+            @Html.ValidationMessageFor(model => model.sellerPhone)
+        </div>
+
+        <div class="editor-label">
+            Email:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerEmail)
+            @Html.ValidationMessageFor(model => model.sellerEmail)
+        </div>
+
+        <div class="editor-label">
+            Expiry Date:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerExpiryDate)
+            @Html.ValidationMessageFor(model => model.sellerExpiryDate)
+        </div>
+
+        <p>
+            <a class="btn btn-success"><input type="submit" value="Save" /></a>
+</p>
+}
+
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back", "Index")</a>
+</div>

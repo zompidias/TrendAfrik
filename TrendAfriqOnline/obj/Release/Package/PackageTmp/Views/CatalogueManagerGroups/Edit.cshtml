@@ -1,0 +1,34 @@
+﻿@model TABusinessLayer.Catalogue
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        @Html.HiddenFor(model => model.catalogueId)
+
+        <div class="editor-label">
+            Catalogue Name
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.catalogueName)
+            @Html.ValidationMessageFor(model => model.catalogueName)
+        </div>
+
+        <p>
+            <a class="btn btn-success"> <input type="submit" value="Save"/> </a>
+</p>
+    </fieldset>
+}
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back", "Index")</a>
+</div>
+

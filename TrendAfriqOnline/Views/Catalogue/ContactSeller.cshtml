@@ -1,0 +1,38 @@
+﻿@model TrendAfriqOnline.Models.SellerItems
+@using TrendAfriqOnline.CustomHTMLHelpers
+
+
+@{
+    ViewBag.Title = "Sellers Contact";
+}
+
+
+
+<div class="container ">
+    <div class="col-lg-6 col-sm-offset-2">
+        <h2>@ViewBag.Title</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="thumbnail">
+                    @Html.Image(@Model.itemPicture, @Model.itemAlternatePicName)
+                </div>
+                <div class="caption">
+                    <h4>@Html.DisplayFor(model => model.itemName)</h4>
+                    <p>Sold By: @Html.DisplayFor(model => model.SellerDetails.sellerName)</p>
+                    <p>Phone(s): @Html.DisplayFor(model => model.SellerDetails.sellerPhone)</p>
+                    <p>Email: @Html.DisplayFor(model => model.SellerDetails.sellerEmail)</p>
+                    <p>Website: @Html.DisplayFor(model => model.SellerDetails.sellerWebsite)</p>
+
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+
+        <div class="col-lg-6 col-lg-offset-2" id="hButton2">
+            <a class="btn btn-warning" @Html.ActionLink("Back", "Details", "Catalogue", new { id = Model.itemId }, null)</a>
+        </div>
+    </div>
+
+    

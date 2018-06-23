@@ -1,0 +1,72 @@
+﻿@model TABusinessLayer.SellerDetails
+
+@{
+    ViewBag.Title = "Add A New Client";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerName)
+            @Html.ValidationMessageFor(model => model.sellerName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerAddress)
+        </div>
+        <div class="editor-multiline-field">
+            @Html.EditorFor(model => model.sellerAddress)
+            @Html.ValidationMessageFor(model => model.sellerAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerPhone)
+            @Html.ValidationMessageFor(model => model.sellerPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerEmail)
+            @Html.ValidationMessageFor(model => model.sellerEmail)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerWebsite)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerWebsite)
+            @Html.ValidationMessageFor(model => model.sellerWebsite)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sellerExpiryDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellerExpiryDate)
+            @Html.ValidationMessageFor(model => model.sellerExpiryDate)
+        </div>
+
+        <p>
+            <a class="btn btn-success"><input type="submit" value="Create" /></a>
+</p>
+    </fieldset>
+}
+
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back", "Index")</a>
+</div>

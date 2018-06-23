@@ -1,0 +1,341 @@
+﻿*
+{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+body
+{
+padding: 60px 0px 20px 0px;
+}
+
+h6 { 
+    /*display: block;
+    font-size: .67em;
+    margin-top: 2.33em;*/
+    padding-bottom:0;
+    margin-bottom: 0;
+    /*margin-left: 0;
+    margin-right: 0;*/
+    font-weight: bold;
+}
+
+.navbar 
+{
+    /*background: url("BImages/images18.jpg");
+    background-size: auto;*/
+  height: 60px;
+}
+
+.nav 
+{
+    background: #3e3737;
+    padding: 5px 0px 0px 0px;
+}
+
+.nav li
+{
+    /*border-right: 2px solid #ffd800;*/
+    /*border-left: 1px solid #ffd800;*/
+}
+
+    .nav li:hover
+     {
+        /*background: #e0ca53;*/        
+        background: #0094ff;
+        text-shadow: 0 0 1px #000;
+    }
+    .nav .dropdown .dropdown-menu 
+    {
+           background: #3e3737;          
+    }
+.dropdown-menu > li > a 
+{
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #f5f5f5;
+    white-space: nowrap;
+}
+    .dropdown-menu > li > a:hover 
+    {
+        background: #e0ca53;
+    }
+
+.nav .dropdown .dropdown-menu li:hover
+ {
+    background: #e0ca53;
+    text-shadow: 0 0 1px #000;
+ }
+.navbar-brand 
+{
+    padding: 0px 30px 0px 0px;
+    float: left;
+}
+#hlogo {
+        height: 100%;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.panel 
+{
+    
+    padding: 20px 0px 0px 0px
+}
+#hmenu 
+{
+    text-align:center;
+    list-style-type: none;
+    padding: 10px 0px 0px 0px;
+    
+}
+#hmenu li 
+{       
+   margin: 5px 0px 7px 0px;
+
+}
+#hmenu a:link, #hmenu a:visited
+{
+	color: #0094ff;
+	text-decoration: none;
+}
+#hmenu a:hover
+{    
+    color: #fff;   
+}
+    #hmenu li:hover 
+{    
+    background-color: #0094ff;
+    border: thin solid #B4B4B4;
+    border-color: #0094ff;
+    border-radius: 7px;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    box-shadow: 0px 0px 0px rgba(0, 0,0,.7);
+    -webkit-box-shadow : 0px 0px 0px rgba(0, 0,0,.7);
+    -moz-box-shadow: 0px 0px 0px rgba(0, 0,0,.7);    
+ }
+    .editor-multiline-field textarea {
+    width: auto;
+    height: 200px;
+}
+#myTopRow 
+{
+    /*margin: 25px 0px 30px 0px;*/
+    /*margin: 15px 0px 10px 0px;*/
+}
+#Rightcategories
+{
+	/*width: auto;*/
+	
+	/*margin: 0 10px 0 0;*/
+	float: right
+}
+/*
+/********************* CSS ANIMATION*********************************/
+
+/*#largeadvert { 
+  position:relative;
+  height:auto;
+  width:auto;
+  margin:0 auto;
+}
+
+#largeadvert img {
+ position:absolute;
+
+  left:0;
+  
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@-webkit-keyframes cf3FadeInOut {
+ 0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#largeadvert img.bottom {
+  animation-delay: 0;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 0;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}
+#largeadvert img.middle {
+  animation-delay: 6s;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 6s;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}
+#largeadvert img.top {
+  animation-delay: 3s;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 3s;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}*/
+
+/*****************************small advert animation*************************/
+/*#smalladvert {
+  position:relative;
+  height:auto;
+  width:auto;
+  margin:0 auto;
+  float: left;
+ margin: 5px;
+}
+
+#smalladvert img {
+ position:absolute;
+
+  left:0;
+  
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@-webkit-keyframes cf3FadeInOut {
+ 0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#smalladvert img.bottom {
+  animation-delay: 0;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 0;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}
+#smalladvert img.middle {
+  animation-delay: 6s;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 6s;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}
+#smalladvert img.top {
+  animation-delay: 3s;
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+-webkit-animation-delay: 3s;
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+}*/
+
+/**************************end animation *****************************/

@@ -1,0 +1,33 @@
+﻿@model TABusinessLayer.Catalogue
+
+@{
+    ViewBag.Title = "Add A New Catalogue";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.catalogueName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.catalogueName)
+            @Html.ValidationMessageFor(model => model.catalogueName)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+  
+}
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back", "Index")</a>
+</div>
+
+

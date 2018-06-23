@@ -1,0 +1,99 @@
+﻿
+@model PagedList.IPagedList<TrendAfriqOnline.Models.SellerItems>
+@using PagedList;
+@using PagedList.Mvc;
+@using TrendAfriqOnline;
+
+@helper Truncate(string
+input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+
+@{
+    ViewBag.Title = "Catalogue Items";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    <a class="btn btn-success" @Html.ActionLink("Create New Item", "Create")</a></p>
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Catalogue Type
+        </th>
+        <th>
+           Client
+        </th>
+        @*<th>
+           Picture
+        </th>*@
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in @Model)
+{
+        using (Html.BeginForm("Delete", "CatalogueManagerItems", new { id = item.itemId }))
+        {
+         
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemName)
+        </td>
+        <td>
+            @Truncate(item.itemDescription, 25)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Catalogue.catalogueName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellerDetails.sellerName)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.itemPicture)
+        </td>*@
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.itemId }) 
+            <input type="submit" value="Delete"
+                   onclick="return confirm('Are you sure you want to Delete Catalogue Item = @item.itemName')" />
+        </td>
+    </tr>
+}
+}
+
+</table>
+
+<div class="container col-sm-offset-4">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    <ul class="pagination">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    </ul>
+</div>
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back to Manager Menu", "Index", "CatalogueManager")</a>
+</div>
+

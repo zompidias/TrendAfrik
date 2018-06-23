@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Choose A Section To Work On";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<html>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Catalogue Group", "Index", "CatalogueManagerGroups")</li>
+        <li>@Html.ActionLink("Seller Details", "Index", "CatalogueManagerSellers")</li>
+        <li>@Html.ActionLink("Items Entry", "Index", "CatalogueManagerItems")</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TrendAfriqOnline.Models.Catalogue>
+
+@{
+    ViewBag.Title = "Catalogue Groups";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New Catalogue", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.catalogueName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.catalogueName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.catalogueId }) 
+        </td>
+    </tr>
+}
+
+</table>
+
+
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back to Manager Menu", "Index", "CatalogueManager")</a>
+</div>

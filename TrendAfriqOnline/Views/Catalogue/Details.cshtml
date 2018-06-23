@@ -1,0 +1,54 @@
+﻿@model TrendAfriqOnline.Models.SellerItems
+
+@using TrendAfriqOnline.CustomHTMLHelpers
+
+
+@{
+    ViewBag.Title = "Item Picked";
+}
+
+<div class="container ">
+    <div class="col-sm-6 col-sm-offset-2">
+        <h2>@ViewBag.Title</h2>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="thumbnail">
+                    @Html.Image(@Model.itemPicture, @Model.itemAlternatePicName)
+                </div>
+                <div class="caption">
+                    <h4>
+                        Seller's Name: @Html.DisplayFor(model => model.SellerDetails.sellerName)
+                    </h4>
+                    <p>@Html.DisplayFor(model => model.itemName)</p>
+                    <p>Price: =N=@Html.DisplayFor(model => model.itemPrice)</p>
+                    <a class="btn btn-success"
+                       @Html.ActionLink("Contact Seller", "ContactSeller", "Catalogue", new { id = @Model.itemId }, "")</a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="thumbnail">
+                    @Html.Image(@Model.pictureA, @Model.itemAlternatePicName)
+                </div>
+                <div class="thumbnail">
+                    @Html.Image(@Model.pictureB, @Model.itemAlternatePicName)
+                </div>
+                <div class="thumbnail">
+                    @Html.Image(@Model.pictureC, @Model.itemAlternatePicName)
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <div class="col-lg-6 col-lg-offset-2" id="hButton1">
+            <a class="btn btn-warning" @Html.ActionLink("Back", "Browse", "Catalogue", new { id = Model.catalogueId }, null)</a>
+        </div>
+    </div>
+</div>
+
+
+
+

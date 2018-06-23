@@ -1,0 +1,124 @@
+﻿@model TABusinessLayer.ContactUs
+
+@{
+    ViewBag.Title = "Please Fill in our Enquiry Form and will get back to you shortly";
+}
+
+<h4>@ViewBag.Title</h4>
+
+@*<div class="col-sm-6">*@
+    @*<div class="container">*@
+        <div class="page-header" id="Contact">
+            <h4>Contact US <br /><small>TrendAfrik is a subsidiary of QuickySales Ltd</small></h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Contact Details</p>
+
+                <address>
+                    <strong>Address</strong><br />
+                    Apo Legislative Qtrs<br />
+                    Zone D, <br />
+                    Abuja, Nigeria
+
+                    <br />
+                    <br />
+                    <strong>Phone</strong><br />
+                    08120042929
+                    <br />
+                    Lines Open 9am to 5pm
+                    <br />
+                    <br />
+                    <strong>Email</strong>
+                    <br />
+                    <a href="mailto:info@trendafrik.com">info@trendafrik.com</a>
+                </address>
+
+            </div>
+</div>
+<div class="row">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+
+        <div class="col-lg-12">
+            <form action="" class="form-horizontal">
+                <div class="form-group">
+                    <label for="user-name" class="col-lg-2 control-label">@Html.LabelFor(model => model.FirstName)</label>
+                    <div class="col-lg-10">
+                        @*@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })*@
+
+
+                        @*<input type="text" class="form-control" placeholder="Enter your FirstName" value="@Html.EditorFor(model => model.FirstName) "  />*@
+                        @*<div class="editor-field">*@
+
+                        @Html.EditorFor(model => model.FirstName)
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                        </div>
+                    </div>
+                @*</div>*@
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="user-name" class="col-lg-2 control-label">@Html.LabelFor(model => model.LastName)</label>
+                    <div class="col-lg-10">
+                        @*<input type="text" class="form-control" placeholder="Enter your Last Name" />*@
+                        @*<div class="editor-field">*@
+
+                        @Html.EditorFor(model => model.LastName)
+                        @Html.ValidationMessageFor(model => model.LastName)
+                        </div>
+                    </div>
+                @*</div>*@
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="user-email" class="col-lg-2 control-label">@Html.LabelFor(model => model.Email)</label>
+                    <div class="col-lg-10" >
+                        @*<div class="editor-field">*@
+                        @*<input type="text" class="form-control" placeholder="Enter your Email"*@
+                        @Html.EditorFor(model => model.Email)
+                        @Html.ValidationMessageFor(model => model.Email)
+
+                        @*</div>*@
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="user-message" class="col-lg-2 control-label">Mesaage</label>
+                    <div class=" editor-multiline-field">
+                        <div class="thumbnail col-lg-10">
+                            @*<textarea name="user-message" class="form-control" cols="20" rows="10"
+                placeholder="Enter Your Message" >*@
+                            @*<div class="editor-multiline-field">*@
+                            @Html.EditorFor(model => model.Comment)
+                            @Html.ValidationMessageFor(model => model.Comment) @*</textarea>*@
+                            @*</div>*@
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    }
+</div>
+
+    @*</div>*@
+
+
+
+    <div class="col-lg-6 col-lg-offset-2" id="hButton1">
+        <a class="btn btn-warning" @Html.ActionLink("Back", "Index", "Home")</a>
+    </div>
+
+    @*</div>*@

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TrendAfriqOnline.Models.SellerDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Client", "Create")
+</p>
+<table>
+    <tr>
+        
+        <th>
+            Client's Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+           Phone Number(s)
+        </th>
+        <th>
+            Expiry Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerExpiryDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.sellerId }) |
+        </td>
+    </tr>
+}
+
+</table>
+
+
+
+<div class="col-lg-6 col-lg-offset-2" id="hButton1">
+    <a class="btn btn-warning" @Html.ActionLink("Back to Manager Menu", "Index", "CatalogueManager")</a>
+</div>

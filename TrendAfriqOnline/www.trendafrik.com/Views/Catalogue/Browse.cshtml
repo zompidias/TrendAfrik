@@ -1,0 +1,87 @@
+﻿@model PagedList.IPagedList<TABusinessLayer.ItemsToBrowse>
+@using PagedList;
+@using PagedList.Mvc;
+
+@using TrendAfriqOnline.Models;
+@using TrendAfriqOnline.CustomHTMLHelpers
+@helper Truncate(string
+input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+@{
+    ViewBag.Title = "Browse Our Catalogue";
+}
+
+<html>
+
+<body>
+
+    @*<div class="container ">*@
+
+        @*<div class="col-sm-6">*@
+            @*<div class="col-sm-6 col-sm-offset-2">*@
+
+                <p>
+                    <a class="btn btn-warning" @Html.ActionLink("Back", "Index", "Home")</a>
+                </p>
+                <h2>@ViewBag.Title</h2>
+                <div class="row">
+                    @foreach (TABusinessLayer.ItemsToBrowse ctItem in @Model)
+                    {
+                        @:<div class="col-lg-2">
+
+
+                            @:<div class="thumbnail">
+                                <text>
+                                    <a href="@Url.Action("Details", new { id = ctItem.itemId })">
+                                        <img alt="@ctItem.itemAlternatePicName"
+                                             src="@Url.Content(ctItem.itemPicture)" />
+                                    </a> </text>
+                                @:</div>
+                            @:<div class="caption">
+                                <text>
+                                <p>Sold By: @Truncate(@ctItem.sellerName, 20)</p>
+                                <p>=N= @Html.DisplayFor(model => ctItem.itemPrice)</p>
+                                  <a class="btn btn-success" href="@Url.Action("Details", new { id = ctItem.itemId })"
+                                     >View</a>
+                                </text>
+                                @:</div>
+
+
+
+
+                            @:</div>
+                    }
+                </div>
+
+                @*</div>*@
+            @*</div>*@
+
+    <div class="container col-sm-offset-4">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        <ul class="pagination">
+            @Html.PagedListPager(Model, page => Url.Action("Browse", new { page }))
+        </ul>
+</div>
+
+    <p>
+        <a class="btn btn-warning" @Html.ActionLink("Back", "Index", "Home")</a>
+    </p>
+
+
+        
+</body>
+
+</html>
+
+
+
+

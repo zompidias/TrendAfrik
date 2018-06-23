@@ -1,0 +1,10 @@
+﻿.jumbotron 
+{
+    background:url('../img_grp.png') no-repeat center top; 
+    background-size: 100%;
+    background-attachment: fixed;
+    /*color: #fff;*/
+   /* min-height: auto;*/
+    /*min-height: 250px;*/
+    /*margin: 25px 0px 0px 0px;*/
+}

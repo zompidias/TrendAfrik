@@ -1,0 +1,50 @@
+﻿@*@{
+        Layout = null;
+    }*@
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">*@
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site_TrendAfriq.css")" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    @Html.Partial("_ViewSwitcher")
+  
+    <div id="header" style='width: 100%;'>
+        @*<h1></h1>*@
+        <br />
+        <br />
+        <ul id="navlist">
+            <li class="first">@Html.ActionLink("Home", "Index", "Home")</li>
+            @*<li>@{Html.RenderAction("LoginDetail", "ShoppingCart");}</li>
+            <li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>*@
+            <li>@Html.ActionLink("ContactUs", "Create", "ContactUs")</li>
+            @using (@Html.BeginForm("SearchItem", "Store"))
+            {
+                <p align="right">@Html.TextBox("search") <input type="submit" value="search" /></p>
+            }
+        </ul>
+    </div>
+
+    @{Html.RenderAction("CatalogueList", "Catalogue");}
+
+    @*@{Html.RenderAction("PromotionAd", "Home");}*@
+
+    <div id="main" style='width: 70%;'>
+        @RenderBody()
+        @*@RenderSection("featured", required: false)*@
+        @*@RenderSection("scripts", required: false)*@
+    </div>
+
+    @*<div id="footer">Property of Quicky Sale Limited © 2015
+        </div>*@
+
+</body>
+</html>
+
