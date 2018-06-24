@@ -1,4 +1,4 @@
-##TRENDAFRIK PROJECT
+## TRENDAFRIK PROJECT
 
 This web project was created to aid buyers and sellers of African goods and services locate each other.  
 
