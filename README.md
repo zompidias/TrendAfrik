@@ -19,7 +19,7 @@ To rerun this project one will need to go into the webconfig page  and change th
 The screen shots for the projects have also been included.  
 
 Pics TrendAfrik1 to TrendAfrik4 give an overview of the site.  
-![TrendAfrik1](https://github.com/zompidias/TrendAfrik.git/TrendAfrik1.jpg)  
+![TrendAfrik1](https://github.com/zompidias/TrendAfrik1.jpg)  
 ![TrendAfrik2](https://github.com/zompidias/TrendAfrik.git/TrendAfrik2.jpg)  
 ![TrendAfrik3](https://github.com/zompidias/TrendAfrik.git/TrendAfrik3.jpg)  
 ![TrendAfrik4](https://github.com/zompidias/TrendAfrik.git/TrendAfrik4.jpg)  
